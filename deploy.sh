@@ -6,18 +6,20 @@ set -e
 # build
 yarn generate
 
-# navigate into the build directory
+# navigate into built
 cd dist/static
 
-# if you are deploying to a custom domain
-# echo 'beestripes.studio' > CNAME
+# deploy to a custom domain
+echo 'beestripes.studio' > CNAME
 
-#git init
-#git add -A
-#git commit -m 'deploy'
+git init
+git add -A
+git commit -m 'deploy'
+
+# tag a release
 # git tag
 
-# if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:beestripes/beestripes-website.git main:gh-pages
+# push
+git push -f git@github.com:beestripes/beestripes-website.git master:gh-pages
 
 cd -

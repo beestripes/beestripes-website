@@ -21,9 +21,10 @@ const routesToPrerender = fs
   // pre-render each route...
   for (const url of routesToPrerender) {
     const context = {}
-    const appHtml = await render(url, context)
 
-    const html = template.replace(`<!--app-html-->`, appHtml)
+    const appHtml = await render(url, context);
+
+    const html = template.replace(`<!--inject-ssr-->`, appHtml)
 
     const filePath = `dist/static${url === '/' ? '/index' : url}.html`
     fs.writeFileSync(toAbsolute(filePath), html)
