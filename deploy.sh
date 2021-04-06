@@ -16,9 +16,6 @@ git init
 git add -A
 git commit -m 'deploy'
 
-# tag a release
-# git tag
-
 # push
 git push -f git@github.com:beestripes/beestripes-website.git master:gh-pages
 

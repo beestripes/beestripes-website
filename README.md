@@ -1,4 +1,6 @@
-# beestripes.studio
+# [beestripes.studio](https://beestripes.studio)
+
+## Code
 
 Install 
 
@@ -7,3 +9,9 @@ Install
 Run
 
     yarn start
+
+# Deploy
+
+Build and deploy 
+
+    yarn deploy

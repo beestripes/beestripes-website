@@ -28,7 +28,7 @@ export function App() {
   }
 
   return (
-    <div style={{ height: '100%', width: '100%', background: 'FF35EE' }}>
+    <div style={{ height: '100%', width: '100%', backgroundColor: '#FEFEFE' }}>
       <div className={'container max-w-3xl sm-container mx-auto py-16 px-4 flex flex-col h-full'}>
         <div className={'flex'}>
           <div><img src={Logo} width="160" alt="Bee Stripes" /></div>
