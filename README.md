@@ -1,4 +1,4 @@
-# [beestripes.studio](https://beestripes.studio)
+# Bee Stripes website
 
 ## Code
 
@@ -10,7 +10,7 @@ Run
 
     yarn start
 
-# Deploy
+## Deploy
 
 Build and deploy 
 
