@@ -12,6 +12,10 @@ Run
 
 ## Deploy
 
+Verify 
+
+    yarn start:static
+
 Build and deploy 
 
     yarn deploy
