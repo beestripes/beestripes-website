@@ -11,8 +11,7 @@
     "generate": "NODE_ENV=production vite build --outDir dist/static && yarn build:server && node prerender",
     "debug": "node --inspect-brk server",
     "deploy": "sh deploy.sh",
-    "start": "yarn build && yarn dev",
-    "start:static": "NODE_ENV=production yarn generate && serve dist/static"
+    "start": "NODE_ENV=production yarn generate && serve dist/static"
   },
   "dependencies": {
     "autoprefixer": "^10.2.5",
