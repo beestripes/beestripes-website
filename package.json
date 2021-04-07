@@ -3,6 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "license": "MIT",
+  "repository": "github:beestripes/beestripes-website",
+  "homepage": "https://beestripes.studio",
   "scripts": {
     "clean": "rimraf dist",
     "dev": "node server",
