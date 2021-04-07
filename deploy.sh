@@ -10,7 +10,7 @@ yarn generate
 cd dist/static
 
 # deploy to a custom domain
-echo 'beestripes.studio' > CNAME
+echo 'beestripes.io' > CNAME
 
 git init
 git add -A

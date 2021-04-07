@@ -6,7 +6,7 @@ const steps = {
   'enter': {
     initial: { opacity: 0, y: 50 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.5, ease: 'circOut' },
+    transition: { duration: 0.5, ease: 'circOut', delay: 0.2 },
   },
 }
 
