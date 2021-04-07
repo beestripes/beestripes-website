@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Logo } from './splash-logo';
+import { SplashLogo } from './SplashLogo';
 import { motion } from "framer-motion";
 
 const steps = {
@@ -29,7 +29,7 @@ export const Splash = ({ onComplete = () => null }) => {
 
 	return (
 		<motion.div {...animationProps} className={'absolute top-0 bottom-0 left-0 right-0 z-10'} style={{background: 'black'}}>
-			<Logo />
+			<SplashLogo />
 		</motion.div>
 	)
 }

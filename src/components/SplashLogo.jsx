@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Logo = () => (
+export const SplashLogo = () => (
 	<svg style={{
 		height: '100%',
 		verticalAlign: 'middle',

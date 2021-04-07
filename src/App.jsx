@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Logo from './assets/logo-default.svg';
+import { PreloadFonts } from './components/PreloadFonts';
 
 import "../node_modules/repaintless/repaintless-css/repaintless.css";
 import './assets/fonts/jungka.module.css';
 
-import { Splash } from './components/splash';
+import { Splash } from './components/Splash';
 
 // Auto generates routes from files under ./pages
 // https://vitejs.dev/guide/features.html#glob-import
@@ -29,6 +30,7 @@ export function App() {
 
   return (
     <div style={{ height: '100%', width: '100%', backgroundColor: '#FEFEFE' }}>
+      <PreloadFonts />
       <div className={'container max-w-3xl sm-container mx-auto py-16 px-4 flex flex-col h-full'}>
         <div className={'flex'}>
           <div><img src={Logo} width="160" alt="Bee Stripes" /></div>
