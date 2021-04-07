@@ -1,6 +1,6 @@
 # Bee Stripes website
 
-👉 [beestripes.io](https://beestripes.io)
+👉 [beestripes.studio](https://beestripes.studio)
 
 ## Code
 
