@@ -1,9 +1,9 @@
 import React from 'react';
-import Tokens from '../tokens';
+import tokens from "../tokens";
 
 export const PreloadFonts = () => (
 	<>
-		<span style={{fontFamily: Tokens.fontFamily.jungkaMedium}} />
-		<span style={{fontFamily: Tokens.fontFamily.jungkaLight}} />
+		<span style={{ fontFamily: tokens.fontFamily.jungkaMedium }}>.</span>
+		<span style={{ fontFamily: tokens.fontFamily.jungkaLight }}>.</span>
 	</>
 )

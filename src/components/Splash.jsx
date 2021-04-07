@@ -28,8 +28,10 @@ export const Splash = ({ onComplete = () => null }) => {
 	}, []);
 
 	return (
-		<motion.div {...animationProps} className={'absolute top-0 bottom-0 left-0 right-0 z-10'} style={{background: 'black'}}>
-			<SplashLogo />
-		</motion.div>
+		<div {...animationProps} className={'absolute top-0 bottom-0 left-0 right-0 z-10'} style={{background: 'black'}}>
+			<motion.div {...animationProps} className={'absolute top-0 bottom-0 left-0 right-0'}>
+				<SplashLogo />
+			</motion.div>
+		</div>
 	)
 }

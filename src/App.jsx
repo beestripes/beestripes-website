@@ -24,12 +24,19 @@ export function App() {
   const [ shownSplash, setShownSplash ] = useState(false);
 
   if (!shownSplash) {
-    return <Splash onComplete={() => setShownSplash(true)} />
+    return (
+      <>
+        <Splash onComplete={() => setShownSplash(true)} />
+        {/* The point here is to try to preload fonts to avoid FOUT */}
+        <div className={'z-0 opacity-0'}>
+          <PreloadFonts />
+        </div>
+      </>
+    )
   }
 
   return (
     <div style={{ height: '100%', width: '100%', backgroundColor: '#FEFEFE' }}>
-      <PreloadFonts />
       <div className={'container max-w-3xl sm-container mx-auto py-16 px-4 flex flex-col h-full'}>
         <div className={'flex'}>
           <div><img src={Logo} width="160" alt="Bee Stripes" /></div>
