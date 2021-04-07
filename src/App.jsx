@@ -3,7 +3,6 @@ import { Route, Switch } from 'react-router-dom';
 import Logo from './assets/logo-default.svg';
 import { PreloadFonts } from './components/PreloadFonts';
 
-import "../node_modules/repaintless/repaintless-css/repaintless.css";
 import './assets/fonts/jungka.module.css';
 
 import { Splash } from './components/Splash';
