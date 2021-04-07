@@ -12,6 +12,10 @@ Run
 
 ## Deploy
 
+Build
+
+    yarn generate
+
 Verify 
 
     yarn serve:static
