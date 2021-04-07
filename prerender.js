@@ -21,8 +21,7 @@ const routesToPrerender = fs
   // pre-render each route...
   for (const url of routesToPrerender) {
     const context = {}
-
-    const appHtml = await render(url, context);
+    const appHtml = await render(url, context)
 
     const html = template.replace(`<!--inject-ssr-->`, appHtml)
 
