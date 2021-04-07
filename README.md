@@ -14,12 +14,9 @@ Run
 
 ## Deploy
 
-Build
+Verify (optional)
 
     yarn generate
-
-Verify 
-
     yarn serve:static
 
 Build and deploy 
