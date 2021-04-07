@@ -9,22 +9,23 @@ const steps = {
 		transition: { duration: 0.75 },
 	},
 	'exit': {
-		initial: { opacity: 1 },
+		initial: { opacity: 1.75 },
 		animate: { opacity: 0 },
-		transition: { duration: 0.5 },
+		transition: { duration: 0.75 },
 	}
 }
 
-export const Splash = ({ onComplete = () => null }) => {
+export const Splash = ({ onComplete = () => console.log('requires "onComplete" prop') }) => {
 	const [animationProps, setAnimationProps] = useState(steps['enter']);
 
 	useEffect(() => {
 		setTimeout(() => {
 			setAnimationProps(steps['exit']);
 			setTimeout(() => {
+				console.log('seeting shownSplash')
 				onComplete();
 			}, 500);
-		}, 1500);
+		}, 2500);
 	}, []);
 
 	return (
