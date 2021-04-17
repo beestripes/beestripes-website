@@ -10,23 +10,30 @@ import './assets/fonts/jungka.module.css';
 export function App() {
   const location = useLocation();
   const [ shownSplash, setShownSplash ] = useState(false);
+  // const shownSplash = false;
+  // const setShownSplash = () => {};
 
   return (
-    <div style={{ height: '100%', width: '100%', backgroundColor: '#FEFEFE' }}>
-      <div className={'container max-w-3xl sm-container mx-auto py-8 md:py-16 px-4 flex flex-col h-full'}>
+    <div className={'w-full h-full'} style={{ backgroundColor: '#FEFEFE' }}>
+      <div className={'h-full md:mx-auto max-w-screen-md'}>
         {(!shownSplash && location.pathname === '/') && <Splash onComplete={() => setShownSplash(true)} />}
-        <div className={'flex'}>
-          <div className={'w-2/6 md:w-min'}><img src={Logo} width="160" alt="Bee Stripes" /></div>
+
+        <div className={'flex flex-col h-full px-6'}>
+          <div className={'flex'}>
+            <div className={'w-28 pt-6 md:w-36 md:pt-8'}><img src={Logo} width="160" alt="Bee Stripes" /></div>
+          </div>
+          <div className={'flex flex-1 sm:items-center'}>
+            <Switch>
+              <Route key={'home'} path={'/'} component={() => <Home onEnter={shownSplash} />} />
+              {/*<Route key={'about'} path={'/about'} component={About} />*/}
+            </Switch>
+          </div>
+          <div className={'md:absolute md:bottom-4 md:left-6'}>
+            <p className="mt-2 pb-6 leading-normal" style={{color: '#b4b4b4'}}>hi@beestripes.studio</p>
+          </div>
         </div>
-        <div className={'flex flex-1 md:items-center'}>
-          <Switch>
-            <Route key={'home'} path={'/'} component={() => <Home onEnter={shownSplash} />} />
-            <Route key={'about'} path={'/about'} component={About} />
-          </Switch>
-        </div>
-        <div className={'md:absolute md:bottom-4 md:left-6 '}>
-          <p className="mt-2 pb-6 leading-normal" style={{color: '#b4b4b4'}}>hi@beestripes.studio</p>
-        </div>
+
+
       </div>
     </div>
   )

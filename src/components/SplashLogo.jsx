@@ -8,7 +8,7 @@ export const SplashLogo = () => (
 		float: 'none',
 		margin: '0 auto',
 		display: 'block',
-	}} xmlns="http://www.w3.org/2000/svg" width={540} viewBox="0 0 584.32 99.66">
+	}} className={'w-6/12 md:w-min'} xmlns="http://www.w3.org/2000/svg" width={540} viewBox="0 0 584.32 99.66">
 		<title>Bee Stripes</title>
 		<defs>
 			<style>{`.cls-1{fill:#fff;}`}</style>

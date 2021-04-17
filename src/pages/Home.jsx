@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import tokens from "../tokens";
 import { motion } from 'framer-motion';
+import { useMediaQuery } from 'react-responsive';
 
 const steps = {
   'init': {
@@ -15,6 +16,8 @@ const steps = {
 
 const Home = ({ onEnter }) => {
   const [animationProps, setAnimationProps] = useState(steps['init']);
+  const isMd = useMediaQuery({ query: '(min-width: 768px)' })
+
 
   useEffect(() => {
     setAnimationProps(steps['enter'])
@@ -22,11 +25,18 @@ const Home = ({ onEnter }) => {
 
   return (
     <motion.div {...animationProps} className={'block font-medium'}>
-      <h2 className="pt-16 md:pt-0 text-5xl md:text-6xl text-black" style={{ fontFamily: tokens.fontFamily.jungkaMedium }}>
-      <span className={'block'}>
-        <span style={{ color: 'red' }}>_we</span> build products that
-      </span>
-        <span className={'block'}>test ideas</span>
+      <h2 className="pt-20 text-4xl md:pt-0 md:text-6xl text-black" style={{ fontFamily: tokens.fontFamily.jungkaMedium }}>
+        {isMd
+          ? (
+            <>
+              <span className={'block'}><span style={{ color: 'red' }}>_we</span> build products that</span>
+              <span className={'block'}>test ideas</span>
+            </>
+          )
+          : (
+            <span><span style={{ color: 'red' }}>_we</span> build products that test ideas</span>
+          )
+        }
       </h2>
       <div className={'mt-14 md:mt-20 text-black'} style={{ fontFamily: tokens.fontFamily.jungkaLight }}>
         <p className="text-xl md:text-2xl pb-6 leading-normal">We swarm with you to test and validate your business ideas.</p>
