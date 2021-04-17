@@ -10,11 +10,9 @@ import './assets/fonts/jungka.module.css';
 export function App() {
   const location = useLocation();
   const [ shownSplash, setShownSplash ] = useState(false);
-  // const shownSplash = false;
-  // const setShownSplash = () => {};
 
   return (
-    <div className={'w-full h-full'} style={{ backgroundColor: '#FEFEFE' }}>
+    <div className={'w-full h-full'} style={{ backgroundColor: '#FEFEFE', overflow: shownSplash ? 'visible' : 'hidden' }}>
       <div className={'h-full md:mx-auto max-w-screen-md'}>
         {(!shownSplash && location.pathname === '/') && <Splash onComplete={() => setShownSplash(true)} />}
 
@@ -28,11 +26,10 @@ export function App() {
               {/*<Route key={'about'} path={'/about'} component={About} />*/}
             </Switch>
           </div>
-          <div className={'md:absolute md:bottom-4 md:left-6'}>
+          <div className={'md:absolute md:bottom-4 md:left-6 pb-10 md:pb-0'}>
             <p className="mt-2 pb-6 leading-normal" style={{color: '#b4b4b4'}}>hi@beestripes.studio</p>
           </div>
         </div>
-
 
       </div>
     </div>
