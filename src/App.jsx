@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Route, Switch, useLocation } from 'react-router-dom';
 import Logo from './assets/logo-default.svg';
 import Home from './pages/Home';
-import About from './pages/About';
+// import About from './pages/About';
 import { Splash } from './components/Splash';
 
 import './assets/fonts/jungka.module.css';
